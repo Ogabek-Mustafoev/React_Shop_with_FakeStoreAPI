@@ -1,0 +1,176 @@
+.basket {
+  background: #eee;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.go_product {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  transition: all 0.5s;
+  text-decoration: underline;
+}
+.go_product:hover {
+  transform: scale(1.1);
+}
+.basket_header {
+  background: white;
+  padding: 1rem;
+  text-align: center;
+}
+.empty {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+}
+.basketItem_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 1rem 0 1rem;
+}
+.bsk_container {
+  width: 90%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+.bsk_img {
+  position: relative;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.darken {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+.bsk_img-remove {
+  background: #1d71f8;
+  transform: translateY(15rem);
+  width: 100%;
+  color: white;
+  padding: 0.5rem 0;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.bsk_img:hover .bsk_img-remove {
+  transform: translateY(0);
+}
+.bsk_img:hover .darken {
+  background: rgba(0, 0, 0, 0.3);
+}
+.bsk_content {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  gap: 0.5rem;
+}
+.bsk_content .info {
+  background: white;
+  padding: 0.7rem 1rem;
+}
+.bsk_content .btns {
+  background: rgb(255, 255, 255);
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.info_title {
+  font-weight: 400;
+  color: #1d71f8;
+}
+.info_text {
+  font-weight: 300;
+  display: block;
+  margin-top: 0.5rem;
+}
+.right_content {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+}
+.buy {
+  margin-left: 0.5rem;
+}
+.right_content .btn {
+  padding: 0.5rem 1rem;
+}
+.btns span {
+  padding: 0 0.5rem;
+}
+.bsk_btn {
+  display: flex;
+  font-weight: 300;
+  font-size: 1.5rem;
+  border: none;
+  background: white;
+  padding: 0.5rem 0.5rem;
+  transition: all 0.3s;
+}
+.bsk_btn:hover {
+  background: #1d71f8;
+  color: white;
+}
+.bsk_img img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 10rem;
+  margin: 1rem 0.5rem;
+}
+.total_price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  position: relative;
+  margin-top: 1rem;
+  text-align: center;
+  background: white;
+}
+.allCost h3 {
+  font-weight: 400;
+  padding: 0.7rem 0;
+}
+.delivery h3 {
+  font-weight: 300;
+  padding: 0.3rem 0;
+}
+
+.check ion-icon {
+  align-items: center;
+  margin-bottom: -0.3rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .bsk_container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .bsk_container {
+    grid-template-columns: 1fr;
+  }
+  .bsk_content {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .empty {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+  width: 100%;
+}
+.main {
+  position: absolute;
+  width: calc(100% - 14.75rem);
+  left: 14.75rem;
+  min-height: 100vh;
+  background: white;
+  transition: 0.5s;
+}
+
+.main.active {
+  width: calc(100% - 5rem);
+  left: 5rem;
+}

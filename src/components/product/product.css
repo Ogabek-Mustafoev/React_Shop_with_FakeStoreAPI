@@ -1,0 +1,159 @@
+.product__wrapper {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+.react-loading-skeleton {
+  width: 100%;
+  height: 100%;
+}
+.product-heading {
+  padding: 1.5rem 0;
+  font-size: 2.2rem;
+  font-weight: 300;
+  text-align: center;
+}
+.d-grid {
+  height: 100%;
+  width: 100%;
+  padding: 1rem 2rem 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+.product_img {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  overflow: hidden;
+  border-radius: 49px;
+  background: #fdfcfc;
+  box-shadow: 8px 8px 23px #797979, -8px -8px 23px #ffffff;
+}
+.product_img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.product_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 49px;
+  background: #fdfcfc;
+  box-shadow: inset 16px 16px 100px #d5d4d4, inset -16px -16px 100px #ffffff;
+}
+.category {
+  font-size: 2.5rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+.category ion-icon {
+  font-size: 3rem;
+  color: #0008ff;
+}
+.product_description {
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+.product_price {
+  font-weight: 900;
+  font-size: 2rem;
+}
+.product_rating {
+  display: flex;
+  align-items: center;
+}
+.product_rating b {
+  margin-right: 0.5rem;
+}
+.product_rating ion-icon {
+  margin-left: 0.3rem;
+  font-size: 1.5rem;
+  color: orange;
+}
+.product_rating span {
+  margin-left: 0.3rem;
+  font-weight: 400;
+}
+.basket_btn {
+  display: flex;
+}
+.basket_btn button {
+  margin-right: 1rem;
+}
+.basket_btn .btn {
+  font-size: 1.2rem;
+}
+@media (orientation: portrait) {
+  .product__wrapper {
+    height: 70vh;
+  }
+  .d-grid {
+    height: 100%;
+    width: 100%;
+    padding: 0.8rem;
+  }
+  .product_img {
+    padding: 0.5rem;
+  }
+  .product_content {
+    gap: 1.5rem;
+    padding: 1.3rem;
+  }
+  .category {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .category ion-icon {
+    font-size: 2.5rem;
+  }
+  .product_description {
+    font-size: 1.25rem;
+  }
+  .product_price {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .d-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-heading {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+  }
+  .product__wrapper {
+    height: fit-content;
+  }
+  .product_img {
+    border-radius: 29px;
+  }
+  .product_content {
+    border-radius: 29px;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+  .category {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .category ion-icon {
+    font-size: 2rem;
+  }
+  .product_description {
+    font-size: 1.2rem;
+  }
+  .product_price {
+    font-size: 1.7rem;
+  }
+}

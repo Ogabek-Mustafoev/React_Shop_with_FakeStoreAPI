@@ -1,0 +1,43 @@
+.chart {
+  padding: 1rem 5rem;
+  height: 90vh !important;
+  margin-top: 1rem;
+}
+.chart_content {
+  padding: 0 1rem 1rem 1rem;
+  text-align: center;
+}
+.chart_text {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.chart_bottom-content {
+  padding: 1.5rem 1rem 2rem 1.2rem;
+}
+.chart_bottom-content li {
+  padding: 0.3rem 0;
+  list-style-type: disc;
+}
+.men {
+  color: red;
+}
+.women {
+  color: blue;
+}
+.jew {
+  color: green;
+}
+.elect {
+  color: orange;
+}
+@media (max-width: 991px) {
+  .chart {
+    padding: 1rem 2.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .chart {
+    padding: 0.2rem;
+    padding-right: 0;
+  }
+}

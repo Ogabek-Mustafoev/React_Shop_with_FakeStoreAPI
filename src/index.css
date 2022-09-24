@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: white;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: 0.5s all ease;
+  background: #1d71f8;
+}
+.btn:hover {
+  background: transparent;
+  color: black;
+  border-color: #1d71f8;
+  cursor: pointer;
+}
+
+/*----------------------- responsive design for Tablets ----------------*/
+@media (max-width: 991px) {
+  .navigation.active {
+    left: -14.75rem;
+  }
+  .navigation {
+    width: 14.75rem;
+    left: 0;
+  }
+  .main.active {
+    width: 100% !important;
+    left: 0 !important;
+  }
+  .main {
+    left: 14.75rem;
+    width: 100% !important;
+  }
+}
+/*----------------------- responsive design for phones ----------------*/
+@media (max-width: 488px) {
+  .user {
+    min-width: 2.5rem;
+  }
+  .navigation {
+    width: 100vw !important;
+    left: 0 !important;
+    z-index: 11;
+  }
+  .navigation.active {
+    left: -100vw !important;
+  }
+  .main {
+    left: -14.75rem !important;
+    width: 100% !important;
+  }
+  .main.active .toggle {
+    position: relative;
+    cursor: pointer;
+    color: black;
+  }
+  .main .toggle {
+    position: fixed;
+    z-index: 12;
+    right: 0;
+    color: white;
+  }
+  .btn {
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+  }
+}
