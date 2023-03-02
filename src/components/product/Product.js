@@ -2,8 +2,8 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Loading from "../loading/Loading";
+import { ShopContext } from './../../context/context';
 import "./product.css";
-import { ShopContext } from "./../context";
 
 export default function Product() {
   const { id } = useParams();
@@ -16,9 +16,7 @@ export default function Product() {
       .get(`https://fakestoreapi.com/products/${id}`)
       .catch((e) => console.log("Error: ", e.message));
     setProduct(await response.data);
-    setTimeout(() => {
-      setProductLoading(false);
-    }, 1400);
+    setTimeout(() => setProductLoading(false), 1400);
   };
   useEffect(() => {
     fetchProducts();

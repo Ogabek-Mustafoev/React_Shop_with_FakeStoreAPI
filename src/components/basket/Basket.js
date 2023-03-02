@@ -1,18 +1,24 @@
 import BasketItem from "./BasketItem";
-import "./basket.css";
 import { Link } from "react-router-dom";
-import { useContext, useId } from "react";
-import { ShopContext } from "../context";
+import { useContext } from "react";
+import { ShopContext } from '../../context/context';
+import "./basket.css";
 
 export default function BasketList() {
-  const id = useId();
-  console.log(id);
   const { order } = useContext(ShopContext);
+
+  const formatCurrency = (currency) => {
+    return currency.toLocaleString("en-US", {
+      style: 'currency',
+      currency: 'USD',
+    })
+  }
 
   const totalPrice = order.reduce((sum, el) => {
     return sum + el.price * el.quantity;
   }, 0);
-  const taxes = ((5 / 100) * totalPrice).toFixed(2);
+  const taxes = ((5 / 100) * totalPrice);
+  const totalCost = +totalPrice + +taxes;
 
   return (
     <div className="basket">
@@ -21,7 +27,7 @@ export default function BasketList() {
       </div>
       {order.length ? (
         order.map((item) => {
-          return <BasketItem key={id} {...item} />;
+          return <BasketItem key={item.id} {...item} formatCurrency={formatCurrency} />;
         })
       ) : (
         <span className="empty" data-aos="fade-up" data-aos-delay="350">
@@ -38,12 +44,12 @@ export default function BasketList() {
 
       <div className="total_price" data-aos="fade-up" data-aos-delay="350">
         <div className="delivery" data-aos="fade-right" data-aos-delay="400">
-          <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
-          <h3>Taxes (5%): ${taxes} </h3>
-          <h3>Delivery: $0</h3>
+          <h3>Total Price: {formatCurrency(totalPrice)}</h3>
+          <h3>Taxes (5%): {formatCurrency(taxes)} </h3>
+          <h3>Delivery: $0.00</h3>
         </div>
         <div className="allCost" data-aos="fade-left" data-aos-delay="450">
-          <h3>All Costs: ${(+totalPrice + +taxes).toFixed(2)}</h3>
+          <h3>All Costs: {formatCurrency(totalCost)}</h3>
           <button className="btn check">
             Checkout <ion-icon name="shield-checkmark-outline"></ion-icon>
           </button>

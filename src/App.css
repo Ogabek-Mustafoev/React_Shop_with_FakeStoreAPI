@@ -15,3 +15,10 @@
   width: calc(100% - 5rem);
   left: 5rem;
 }
+
+.hidden{
+  display: none;
+}
+.block{
+  display: block;
+}

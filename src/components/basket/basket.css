@@ -59,15 +59,25 @@
   transition: all 0.3s;
 }
 .bsk_img-remove {
-  background: #1d71f8;
   transform: translateY(15rem);
   width: 100%;
-  color: white;
   padding: 0.5rem 0;
   text-align: center;
   transition: all 0.5s;
   cursor: pointer;
 }
+.bsk_img-remove i{
+  font-size: 2rem;
+  padding: 1rem;
+  background: white;
+  color: #1d71f8;
+  border-radius: .5rem;
+  transition: .2s;
+}
+.bsk_img-remove i:hover{
+  color: red;
+}
+
 .bsk_img:hover .bsk_img-remove {
   transform: translateY(0);
 }

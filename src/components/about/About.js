@@ -43,10 +43,7 @@ export default function About() {
         <div>
           <h1 data-aos-delay="1500" data-aos-duration="800" data-aos="zoom-out">
             about us{" "}
-            <span
-              data-aos-delay="1300"
-              data-aos="fade-up"
-              data-aos-duration="1800"
+            <span data-aos-delay="1300" data-aos="fade-up" data-aos-duration="1800"
             >
               © {new Date().getFullYear()} all rights reserved
             </span>
@@ -68,38 +65,27 @@ export default function About() {
           </p>
           <div className="footer__socials">
             <a
-              data-aos-delay="600"
-              data-aos="fade-up"
-              target="_blank"
-              href="mailto:mustafoevogabek011@gmail.com"
-              rel="noopener noreferrer"
+              data-aos-delay="600" data-aos="fade-up" target="_blank"
+              href="mailto:mustafoev0806@gmail.com" rel="noopener noreferrer"
             >
               <i className="fa-solid fa-envelope"></i>
             </a>
             <a
-              data-aos-delay="700"
-              data-aos="fade-up"
-              href="https://t.me/MUSTAF0YEV"
-              target="_blank"
-              rel="noopener noreferrer"
+              data-aos-delay="700" data-aos="fade-up" href="https://t.me/Ogabek_Mustafoyev"
+              target="_blank" rel="noopener noreferrer"
             >
               <i className="fa-brands fa-telegram"></i>
             </a>
             <a
-              data-aos-delay="800"
-              data-aos="fade-up"
-              href="https://www.instagram.com/mustafoyev__ogabek/"
-              target="_blank"
-              rel="noopener noreferrer"
+              data-aos-delay="800" data-aos="fade-up" href="https://www.instagram.com/mustafoev__ogabek/"
+              target="_blank" rel="noopener noreferrer"
             >
               <i className="fa-brands fa-instagram"></i>
             </a>
             <a
-              data-aos-delay="900"
-              data-aos="fade-up"
-              href="https://www.facebook.com/ogabek.mustafoyev.54/"
-              target="_blank"
-              rel="noopener noreferrer"
+              data-aos-delay="900" data-aos="fade-up"
+              href="https://www.facebook.com/ogabek.mustafoyev.5/"
+              target="_blank" rel="noopener noreferrer"
             >
               <i className="fa-brands fa-facebook"></i>
             </a>

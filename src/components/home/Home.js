@@ -1,8 +1,8 @@
 import Slider from "../slider/Slider";
 import bg from "../../assets/bg.jpg";
-import "./home.css";
 import { useContext } from "react";
-import { ShopContext } from "../context";
+import { ShopContext } from './../../context/context';
+import "./home.css";
 
 export default function Home() {
   const { data } = useContext(ShopContext);

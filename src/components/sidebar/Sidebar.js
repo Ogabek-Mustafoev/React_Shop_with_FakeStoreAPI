@@ -1,9 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import "./sidebar.css";
 import shop from "../../assets/shop-logo.png";
+import { useContext } from "react";
+import { ShopContext } from "../../context/context";
 
-export default function Sidebar({ toggleMenu, setToggleMenu }) {
+export default function Sidebar() {
   const { pathname } = useLocation();
+  const { toggleMenu, setToggleMenu } = useContext(ShopContext);
 
   return (
     <div className={`navigation ${!toggleMenu ? "active" : ""} `}>

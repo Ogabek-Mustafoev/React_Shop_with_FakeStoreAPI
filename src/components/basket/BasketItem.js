@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { ShopContext } from "../context";
+import { ShopContext } from '../../context/context';
 import "./basket.css";
+
 export default function BasketItem(props) {
-  const { id, title, image, price, quantity, description } = props;
-  const { decrementQuantity, incrementQuantity, removeFromBasket } =
-    useContext(ShopContext);
+  const { id, title, image, price, quantity, description, formatCurrency } = props;
+  const { incrDecrQuantity, removeFromBasket } = useContext(ShopContext);
+
   return (
     <>
       <div className="basketItem_wrapper" data-aos="fade-right">
@@ -16,7 +17,7 @@ export default function BasketItem(props) {
                 className="bsk_img-remove"
                 onClick={() => removeFromBasket(id, title)}
               >
-                Remove Product
+                <i className="fa-solid fa-trash"></i>
               </h3>
             </div>
           </div>
@@ -30,19 +31,32 @@ export default function BasketItem(props) {
             <div className="btns">
               <button
                 className="bsk_btn"
-                onClick={() => decrementQuantity(id, title)}
+                data-type="-1"
+                onClick={(e) =>
+                  incrDecrQuantity({
+                    id,
+                    title,
+                    plusMinus: e.target.getAttribute("data-type"),
+                  })
+                }
               >
-                <ion-icon name="remove-outline"></ion-icon>
+                <ion-icon data-type="-1" name="remove-outline"></ion-icon>
               </button>
               <span>{quantity}</span>
               <button
                 className="bsk_btn"
-                onClick={() => incrementQuantity(id, title)}
+                data-type="+1"
+                onClick={(e) =>
+                  incrDecrQuantity({
+                    id,
+                    title,
+                    plusMinus: e.target.getAttribute("data-type"),
+                  })}
               >
-                <ion-icon name="add-outline"></ion-icon>
+                <ion-icon data-type="+1" name="add-outline"></ion-icon>
               </button>
               <div className="right_content">
-                x{quantity} = ${price * quantity}
+                x{quantity} = {formatCurrency(price * quantity)}
                 <a
                   href={`https://www.google.com/search?q=${`buy ${title}`}`}
                   target="_blank"
@@ -59,35 +73,3 @@ export default function BasketItem(props) {
     </>
   );
 }
-// <div className="basket_item">
-//   <div className="basket_img">
-//     <img src={image} alt={title} />
-//   </div>
-//   <div className="basket_content">
-//     <h3 className="basket_title">
-//       {title}{" "}
-//       <b className="middle">
-//         <b>x</b>
-//       </b>
-//       <div className="right">
-//         {quantity} = {price * quantity} <span>$</span>
-//       </div>
-//     </h3>
-//     <p className="basket_text">{description}</p>
-//     <div className="buttons">
-//       <button className="btn" onClick={() => incrementQuantity(id, title)}>
-//         <i className="material-icons left">exposure_plus_1</i>add
-//       </button>
-//       <button className="btn" onClick={() => decrementQuantity(id, title)}>
-//         <i className="material-icons left">exposure_minus_1</i>remove
-//       </button>
-//       <button
-//         className="btn"
-//         onClick={() => props.removeFromBasket(id, title)}
-//       >
-//         <i className="material-icons basket-delete">delete_forever</i>{" "}
-//         delete
-//       </button>
-//     </div>
-//   </div>
-// </div>

@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ShopContext } from "../context";
+import { ShopContext } from '../../context/context';
 
 export default function Cards(props) {
-  const { id, title, category, price, description, image, windowSize } = props;
+  const { id, title, category, price, description, image } = props;
   const { addToBasket } = useContext(ShopContext);
 
   return (
@@ -22,7 +22,7 @@ export default function Cards(props) {
             </p>
             <div className="flex">
               <Link to={`/products/${id}`} className="btn">
-                {windowSize < 653 ? `About ${title.slice(0, 8)}...` : "About"}
+                {window.innerWidth < 653 ? `About ${title.slice(0, 8)}...` : "About"}
               </Link>
               <Link
                 to={""}
