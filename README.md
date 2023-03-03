@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Shop-App</h1>
 
-<p id="description">Shop-App with React Function Component. This project is fully responsive on different devices and window sizes.</p>
+<p id="description">Shop-App with <a href='https://fakestoreapi.com/'>Fake Store API</a> built on React Function Component. This project is fully responsive on different devices and window sizes.</p>
 
 <h2>🚀 Demo</h2>
 
@@ -9,8 +9,8 @@
 <h2>Project Screenshots:</h2>
 
  <div style="display: flex; justify-content: space-between; width=100%;">
-  <img src="https://charming-semolina-34cdcd.netlify.app/assets/Blog-post/post-4.png" alt="project-screenshot" width="450">
-  <img src="https://charming-semolina-34cdcd.netlify.app/assets/Blog-post/post-5.png" alt="project-screenshot" width="450">
+  <img src="https://charming-semolina-34cdcd.netlify.app/assets/Blog-post/post-4.png" alt="project-screenshot" width="500">
+  <img src="https://charming-semolina-34cdcd.netlify.app/assets/Blog-post/post-5.png" alt="project-screenshot" width="500">
  </div>
 
 <h2>🛠️ Installation Steps:</h2>
