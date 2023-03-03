@@ -13,7 +13,6 @@
   <img src="https://charming-semolina-34cdcd.netlify.app/assets/Blog-post/post-5.png" alt="project-screenshot" width="400">
  </div>
 
-
 <h2>🛠️ Installation Steps:</h2>
 
 <p>1. Download code</p>
